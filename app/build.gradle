@@ -27,4 +27,15 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:design:25.1.0'
     testCompile 'junit:junit:4.12'
+
+    // Volley library using to call web services
+    compile 'com.android.volley:volley:1.0.0'
+    // Recycler view library
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+    // card view view library
+    compile 'com.android.support:cardview-v7:25.1.1'
+    // For getter and setter library
+    compile 'org.projectlombok:lombok:1.12.6'
+    // Gson library for convert json string to object
+    compile 'com.google.code.gson:gson:2.4'
 }
