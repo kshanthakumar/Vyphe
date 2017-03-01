@@ -38,4 +38,6 @@ dependencies {
     compile 'org.projectlombok:lombok:1.12.6'
     // Gson library for convert json string to object
     compile 'com.google.code.gson:gson:2.4'
+    // circular ImageView library
+    compile 'de.hdodenhof:circleimageview:2.1.0'
 }

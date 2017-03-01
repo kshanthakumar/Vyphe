@@ -3,14 +3,14 @@
     package="com.example.vyphe">
 
     <application
-        android:name="com.example.vyphe.AppApplication"
+        android:name=".AppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.vyphe.activity.SplashScreenActivity"
+            android:name=".activity.SplashScreenActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
@@ -20,17 +20,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.vyphe.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.example.vyphe.activity.BaseActivity"
+            android:name=".activity.BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.example.vyphe.MainActivity" />
+        <activity android:name=".MainActivity" />
         <activity
-            android:name="com.example.vyphe.activity.LandingActivity"
+            android:name=".activity.LandingActivity"
             android:label="@string/title_activity_landing"
             android:theme="@style/AppTheme" />
+        <activity android:name=".activity.UserVerifyActivity"></activity>
     </application>
 
 </manifest>

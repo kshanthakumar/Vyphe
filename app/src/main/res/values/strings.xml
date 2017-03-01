@@ -8,4 +8,8 @@
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_landing">LandingActivity</string>
     <string name="signUp">SING UP</string>
+
+    <string name="user_name">User Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="verify_user">Verify</string>
 </resources>
