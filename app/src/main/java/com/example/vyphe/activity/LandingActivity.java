@@ -1,4 +1,4 @@
-package com.blissapp.vyphe.activity;
+package com.example.vyphe.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.blissapp.vyphe.R;
+import com.example.vyphe.R;
 
 public class LandingActivity extends AppCompatActivity {
 

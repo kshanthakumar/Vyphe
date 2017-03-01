@@ -1,4 +1,4 @@
-package com.blissapp.vyphe;
+package com.example.vyphe;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

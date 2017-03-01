@@ -1,4 +1,4 @@
-package com.blissapp.vyphe.model;
+package com.example.vyphe.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

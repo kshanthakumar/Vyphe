@@ -1,13 +1,13 @@
-package com.blissapp.vyphe.activity;
+package com.example.vyphe.activity;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.blissapp.vyphe.R;
-import com.blissapp.vyphe.util.AccessMySharedPref;
-import com.blissapp.vyphe.util.MySharedPreference;
+import com.example.vyphe.R;
+import com.example.vyphe.util.AccessMySharedPref;
+import com.example.vyphe.util.MySharedPreference;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

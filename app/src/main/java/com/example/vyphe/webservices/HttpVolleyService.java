@@ -1,8 +1,6 @@
-package com.blissapp.vyphe.webservices;
+package com.example.vyphe.webservices;
 
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
-import com.blissapp.vyphe.listeners.HttpResponseListener;
+import com.example.vyphe.listeners.HttpResponseListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;

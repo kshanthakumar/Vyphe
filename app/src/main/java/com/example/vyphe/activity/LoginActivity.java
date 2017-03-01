@@ -1,9 +1,9 @@
-package com.blissapp.vyphe.activity;
+package com.example.vyphe.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.blissapp.vyphe.R;
+import com.example.vyphe.R;
 
 public class LoginActivity extends AppCompatActivity {
 

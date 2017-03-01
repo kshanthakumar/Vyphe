@@ -1,6 +1,6 @@
-package com.blissapp.vyphe.listeners;
+package com.example.vyphe.listeners;
 
-import com.blissapp.vyphe.model.HttpSingleResponse;
+import com.example.vyphe.model.HttpSingleResponse;
 
 /**
  * Created by Shanthakumar on 24-02-2017.

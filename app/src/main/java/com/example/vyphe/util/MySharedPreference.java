@@ -1,4 +1,4 @@
-package com.blissapp.vyphe.util;
+package com.example.vyphe.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

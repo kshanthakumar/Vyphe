@@ -1,10 +1,9 @@
-package com.blissapp.vyphe.activity;
+package com.example.vyphe.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.blissapp.vyphe.R;
+import com.example.vyphe.R;
 
 public class BaseActivity extends AppCompatActivity {
 

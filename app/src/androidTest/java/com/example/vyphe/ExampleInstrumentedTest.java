@@ -1,4 +1,4 @@
-package com.blissapp.vyphe;
+package com.example.vyphe;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

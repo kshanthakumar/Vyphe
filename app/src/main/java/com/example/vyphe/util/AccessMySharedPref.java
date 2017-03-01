@@ -1,4 +1,4 @@
-package com.blissapp.vyphe.util;
+package com.example.vyphe.util;
 
 /**
  * Created by Shanthakumar on 23-08-2016.
