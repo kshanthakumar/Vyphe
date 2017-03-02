@@ -12,4 +12,6 @@
     <string name="user_name">User Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="verify_user">Verify</string>
+
+    <string name="user_otp_message">We will send you a one time SMS \n message. Carrier fees may apply</string>
 </resources>
