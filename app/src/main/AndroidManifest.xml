@@ -22,16 +22,21 @@
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".activity.BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
+
         <activity
             android:name=".activity.LandingActivity"
             android:label="@string/title_activity_landing"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.UserVerifyActivity"></activity>
+
+        <activity
+            android:name=".activity.UserVerifyActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

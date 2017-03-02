@@ -7,11 +7,12 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_landing">LandingActivity</string>
-    <string name="signUp">SING UP</string>
+    <string name="sign_up">sing up using</string>
 
     <string name="user_name">User Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="verify_user">Verify</string>
-
+    <string name="verify_phone">verify phone number</string>
+    <string name="save_continue">save &amp; Continue</string>
     <string name="user_otp_message">We will send you a one time SMS \n message. Carrier fees may apply</string>
 </resources>

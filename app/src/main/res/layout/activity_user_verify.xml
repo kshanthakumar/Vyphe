@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBlack80"
-    android:fitsSystemWindows="true"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,7 +13,6 @@
 
 
     <RelativeLayout
-
         android:id="@+id/activity_user_verify"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -44,18 +42,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:backgroundTint="@color/colorBlue"
                 android:gravity="center"
                 android:hint="@string/user_name"
                 android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAsh"
                 android:textSize="20sp" />
 
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorBlue"
                 android:gravity="center"
-                android:hint="@string/user_name"
+                android:hint="@string/phone_number"
                 android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAsh"
                 android:textSize="20sp" />
 
             <TextView
@@ -83,9 +86,9 @@
                 android:gravity="center">
 
                 <View
-                    android:layout_width="2dp"
+                    android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
+                    android:background="@color/colorAsh" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,13 +96,14 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Phone Number"
+                    android:text="@string/verify_phone"
+                    android:textAllCaps="true"
                     android:textColor="@color/colorWhite" />
 
                 <View
-                    android:layout_width="2dp"
+                    android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
+                    android:background="@color/colorAsh" />
             </LinearLayout>
 
 
@@ -112,9 +116,9 @@
                 android:gravity="center">
 
                 <View
-                    android:layout_width="2dp"
+                    android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
+                    android:background="@color/colorAsh" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,13 +126,14 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Phone Number"
+                    android:text="@string/save_continue"
+                    android:textAllCaps="true"
                     android:textColor="@color/colorWhite" />
 
                 <View
-                    android:layout_width="2dp"
+                    android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
+                    android:background="@color/colorAsh" />
 
             </LinearLayout>
         </LinearLayout>
@@ -137,7 +142,7 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="15dp"
+        android:paddingBottom="25dp"
         android:paddingRight="35dp"
         app:layout_anchor="@+id/profile_image"
         app:layout_anchorGravity="bottom|right">
