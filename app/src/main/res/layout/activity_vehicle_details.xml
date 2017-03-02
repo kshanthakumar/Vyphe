@@ -9,23 +9,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.UserVerifyActivity">
-
+    tools:context=".activity.VehicleDetailsActivity">
 
     <RelativeLayout
         android:id="@+id/activity_user_verify"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
+            android:id="@+id/vehicle_image"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_above="@+id/ll_user_details"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:src="@drawable/profile"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:src="@drawable/vehicle"
             app:civ_border_color="@color/colorBlack80"
             app:civ_border_width="2dp" />
 
@@ -41,10 +39,9 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:backgroundTint="@color/colorBlue"
                 android:gravity="center"
-                android:hint="@string/user_name"
+                android:hint="@string/vehicle_name"
                 android:textColor="@color/colorWhite"
                 android:textColorHint="@color/colorAsh"
                 android:textSize="20sp" />
@@ -56,18 +53,22 @@
                 android:layout_marginTop="5dp"
                 android:backgroundTint="@color/colorBlue"
                 android:gravity="center"
-                android:hint="@string/phone_number"
+                android:hint="@string/vehicle_color"
                 android:textColor="@color/colorWhite"
                 android:textColorHint="@color/colorAsh"
                 android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!--<EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/user_otp_message"
-                android:textColor="@color/colorAsh" />
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorBlue"
+                android:gravity="center"
+                android:hint="@string/registration_number"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAsh"
+                android:textSize="20sp" />-->
         </LinearLayout>
 
         <LinearLayout
@@ -96,7 +97,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="@string/verify_phone"
+                    android:text="@string/save"
                     android:textAllCaps="true"
                     android:textColor="@color/colorWhite" />
 
@@ -104,37 +105,6 @@
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:background="@color/colorAsh" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/facebook_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@color/colorBlack80"
-                android:gravity="center">
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAsh" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="@string/save_continue"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorWhite" />
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAsh" />
-
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
@@ -144,7 +114,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="25dp"
         android:paddingRight="35dp"
-        app:layout_anchor="@+id/profile_image"
+        app:layout_anchor="@+id/vehicle_image"
         app:layout_anchorGravity="bottom|right">
 
         <android.support.design.widget.FloatingActionButton

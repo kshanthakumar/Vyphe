@@ -8,6 +8,15 @@
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_landing">LandingActivity</string>
     <string name="sign_up">sing up using</string>
+    <string name="exit_alert_title">Are sure want to exit....</string>
+    <string name="exit">Exit ?</string>
+    <string name="save">save</string>
+    <string name="vehicle_name">vehicle name</string>
+    <string name="vehicle_color">vehicle name</string>
+    <string name="registration_number">registration number</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string name="user_name">User Name</string>
     <string name="phone_number">Phone Number</string>

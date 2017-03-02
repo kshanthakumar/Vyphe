@@ -1,17 +1,36 @@
 package com.example.vyphe.activity;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.vyphe.R;
 
-public class UserVerifyActivity extends BaseActivity {
+import de.hdodenhof.circleimageview.CircleImageView;
+
+public class UserVerifyActivity extends BaseActivity implements View.OnClickListener {
 
     private Toolbar mToolbar;
     private ActionBar mActionBar;
+
+    private CircleImageView mIvProfile;
+    private FloatingActionButton mFbCamera;
+
+    private static final int CAMERA_REQUEST = 1000;
+    private static final int REQUEST_CAMERA = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +40,39 @@ public class UserVerifyActivity extends BaseActivity {
         setupView();
         // Call the ActionBar customizer.
         customizeActionBar(mActionBar, mToolbar);
+        requestCameraPermission();
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_CAMERA) {
+            if (grantResults.length == 1
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                System.out.println("Sham enter the onRequestPermissionsResult method :::");
+            }
+        }
+    }
+
+    private void requestCameraPermission() {
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA);
+        }
+
+    }
 
     private void setupView() {
 
+        mIvProfile = (CircleImageView) findViewById(R.id.profile_image);
+        mFbCamera = (FloatingActionButton) findViewById(R.id.fab_camera);
         mToolbar = (Toolbar) findViewById(R.id.app_toolbar);
         setSupportActionBar(mToolbar);
         mActionBar = getSupportActionBar();
+
+        mFbCamera.setOnClickListener(this);
     }
 
     @Override
@@ -55,5 +99,61 @@ public class UserVerifyActivity extends BaseActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_left);
         actionBar.setTitle(getResources().getString(R.string.verify_user));
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            mIvProfile.setImageBitmap(photo);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        showAlertDialog();
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+
+            case R.id.fab_camera:
+                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                break;
+        }
+    }
+
+    private void showAlertDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(UserVerifyActivity.this);
+        builder.setTitle(getString(R.string.exit));
+        builder.setMessage(getString(R.string.exit_alert_title));
+
+        String positiveText = getString(R.string.yes);
+        builder.setPositiveButton(positiveText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // positive button logic
+                        finish();
+                    }
+                });
+
+        String negativeText = getString(android.R.string.no);
+        builder.setNegativeButton(negativeText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // negative button logic
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
+        // display dialog
+        dialog.show();
     }
 }

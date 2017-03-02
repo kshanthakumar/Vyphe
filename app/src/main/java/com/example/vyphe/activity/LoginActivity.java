@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.facebook_login:
                 Toast.makeText(LoginActivity.this, "Select Facebook login",
                         Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginActivity.this, UserVerifyActivity.class));
+                startActivity(new Intent(LoginActivity.this, VehicleDetailsActivity.class));
                 break;
         }
     }
