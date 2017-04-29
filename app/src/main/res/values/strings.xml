@@ -15,8 +15,12 @@
     <string name="vehicle_color">vehicle name</string>
     <string name="registration_number">registration number</string>
 
+    <string name="open_gallery_title">Choose Image</string>
+    <string name="open_gallery_message">Choose Image from gallery or camera...</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
 
     <string name="user_name">User Name</string>
     <string name="phone_number">Phone Number</string>
@@ -24,4 +28,6 @@
     <string name="verify_phone">verify phone number</string>
     <string name="save_continue">save &amp; Continue</string>
     <string name="user_otp_message">We will send you a one time SMS \n message. Carrier fees may apply</string>
+
+    <string name="build_version">0.0.1</string>
 </resources>

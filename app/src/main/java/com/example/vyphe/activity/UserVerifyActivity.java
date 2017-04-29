@@ -30,6 +30,7 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
     private FloatingActionButton mFbCamera;
 
     private static final int CAMERA_REQUEST = 1000;
+    private static final int GALLERY_REQUEST = 2000;
     private static final int REQUEST_CAMERA = 1;
 
     @Override
@@ -107,6 +108,9 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
         if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             mIvProfile.setImageBitmap(photo);
+        } else if (requestCode == GALLERY_REQUEST && resultCode == Activity.RESULT_OK) {
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            mIvProfile.setImageBitmap(photo);
         }
     }
 
@@ -121,10 +125,43 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
         switch (v.getId()) {
 
             case R.id.fab_camera:
-                Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                showOpenImageDialog();
                 break;
         }
+    }
+
+    private void showOpenImageDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(UserVerifyActivity.this);
+        builder.setTitle(getString(R.string.open_gallery_title));
+        builder.setMessage(getString(R.string.open_gallery_message));
+
+        String positiveText = getString(R.string.camera);
+        builder.setPositiveButton(positiveText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // positive button logic
+                        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                        startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                    }
+                });
+
+        String negativeText = getString(R.string.gallery);
+        builder.setNegativeButton(negativeText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // negative button logic
+                        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                        intent.addCategory(Intent.CATEGORY_OPENABLE);
+                        intent.setType("image/*");
+                        startActivityForResult(intent, GALLERY_REQUEST);
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
+        // display dialog
+        dialog.show();
     }
 
     private void showAlertDialog() {
