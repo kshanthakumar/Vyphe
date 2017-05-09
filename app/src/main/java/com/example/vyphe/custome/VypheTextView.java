@@ -29,7 +29,5 @@ public class VypheTextView extends android.support.v7.widget.AppCompatTextView {
     public void init() {
         Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "Montserrat-Regular.ttf");
         setTypeface(tf ,1);
-
     }
-
 }

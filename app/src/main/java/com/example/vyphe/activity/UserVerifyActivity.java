@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +18,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.example.vyphe.R;
 
@@ -38,6 +41,9 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setMainContentView(R.layout.activity_user_verify);
 
+        /*RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) mToolbar.getLayoutParams();
+        layoutParams.height = 42;
+        mToolbar.setLayoutParams(layoutParams);*/
         setupView();
         // Call the ActionBar customizer.
         customizeActionBar(mActionBar, mToolbar);
@@ -50,7 +56,7 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
         if (requestCode == REQUEST_CAMERA) {
             if (grantResults.length == 1
                     && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                System.out.println("Sham enter the onRequestPermissionsResult method :::");
+
             }
         }
     }
@@ -96,6 +102,7 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
 
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
         // To hide action bar home icon
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_arrow_left);

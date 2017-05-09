@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.vyphe.MainActivity;
 import com.example.vyphe.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -39,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.google_login:
                 Toast.makeText(LoginActivity.this, "Select Google login",
                         Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginActivity.this, UserVerifyActivity.class));
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                 break;
             case R.id.facebook_login:
                 Toast.makeText(LoginActivity.this, "Select Facebook login",

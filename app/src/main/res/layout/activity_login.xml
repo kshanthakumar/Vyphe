@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/nav_header_height"
+        android:layout_marginTop="120dp"
         android:src="@drawable/header_logo" />
 
     <LinearLayout
@@ -29,9 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:letterSpacing="0.2"
             android:text="@string/sign_up"
             android:textAllCaps="true"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
 
 
         <LinearLayout
@@ -42,24 +44,14 @@
             android:background="@color/colorWhite"
             android:gravity="center">
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorAsh" />
-
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:padding="10dp"
                 android:src="@drawable/google_icon" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorAsh" />
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/facebook_login"
@@ -69,22 +61,14 @@
             android:background="@color/facebookColor"
             android:gravity="center">
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorAsh" />
 
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
-                android:layout_weight="1"
                 android:padding="10dp"
                 android:src="@drawable/sign_up_facebook_icon" />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorAsh" />
+
 
         </LinearLayout>
     </LinearLayout>

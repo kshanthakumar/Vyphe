@@ -7,6 +7,7 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+
     <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
@@ -14,4 +15,5 @@
         <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
     </style>
+
 </resources>
