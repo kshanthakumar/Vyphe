@@ -22,8 +22,8 @@
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
 
-    <string name="user_name">User Name</string>
-    <string name="phone_number">Phone Number</string>
+    <string name="user_name">USER NAME</string>
+    <string name="phone_number">PHONE NUMBER</string>
     <string name="verify_user">Verify</string>
     <string name="verify_phone">verify phone number</string>
     <string name="save_continue">save &amp; Continue</string>

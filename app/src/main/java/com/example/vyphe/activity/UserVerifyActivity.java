@@ -18,6 +18,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 
 import com.example.vyphe.R;
@@ -36,18 +37,19 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
     private static final int GALLERY_REQUEST = 2000;
     private static final int REQUEST_CAMERA = 1;
 
+    private EditText etUserName;
+    private EditText etPhone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setMainContentView(R.layout.activity_user_verify);
 
-        /*RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) mToolbar.getLayoutParams();
-        layoutParams.height = 42;
-        mToolbar.setLayoutParams(layoutParams);*/
         setupView();
         // Call the ActionBar customizer.
         customizeActionBar(mActionBar, mToolbar);
-        requestCameraPermission();
+
+        setUpValue();
     }
 
     @Override
@@ -73,6 +75,9 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
 
     private void setupView() {
 
+        etUserName = (EditText) findViewById(R.id.et_username);
+        etPhone = (EditText) findViewById(R.id.et_phone);
+
         mIvProfile = (CircleImageView) findViewById(R.id.profile_image);
         mFbCamera = (FloatingActionButton) findViewById(R.id.fab_camera);
         mToolbar = (Toolbar) findViewById(R.id.app_toolbar);
@@ -80,6 +85,12 @@ public class UserVerifyActivity extends BaseActivity implements View.OnClickList
         mActionBar = getSupportActionBar();
 
         mFbCamera.setOnClickListener(this);
+    }
+
+    private void setUpValue() {
+
+        etUserName.setText("SANTHOSH KUMAR");
+        etUserName.requestFocus();
     }
 
     @Override

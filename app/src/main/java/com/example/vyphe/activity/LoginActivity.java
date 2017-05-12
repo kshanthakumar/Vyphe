@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void run() {
                 Animation animation = AnimationUtils.loadAnimation(LoginActivity.this,
                         R.anim.fade_in);
+
                 mLlGoogleLogin.startAnimation(animation);
                 mLlFacebookLogin.startAnimation(animation);
             }
@@ -91,13 +92,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
 
             case R.id.google_login:
-                Toast.makeText(LoginActivity.this, "Select Google login",
-                        Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(LoginActivity.this, UserVerifyActivity.class));
                 break;
             case R.id.facebook_login:
-                Toast.makeText(LoginActivity.this, "Select Facebook login",
-                        Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(LoginActivity.this, VehicleDetailsActivity.class));
                 break;
         }

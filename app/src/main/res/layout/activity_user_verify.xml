@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlack80"
+    android:background="@drawable/sign_up_screen_bg"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".activity.UserVerifyActivity">
 
@@ -20,14 +18,14 @@
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:layout_above="@+id/ll_user_details"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:src="@drawable/man_prof_pic"
             app:civ_border_color="@color/colorBlack80"
-            app:civ_border_width="2dp" />
+            app:civ_border_width="0dp" />
 
         <LinearLayout
             android:id="@+id/ll_user_details"
@@ -38,30 +36,28 @@
             android:orientation="vertical">
 
 
-            <EditText
+            <com.example.vyphe.custome.VypheEditText
+                android:id="@+id/et_username"
+                style="@style/StyledTilEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:backgroundTint="@color/colorBlue"
                 android:gravity="center"
                 android:hint="@string/user_name"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorAsh"
-                android:textSize="20sp" />
+                android:inputType="textCapCharacters" />
 
 
-            <EditText
+            <com.example.vyphe.custome.VypheEditText
+                android:id="@+id/et_phone"
+                style="@style/StyledTilEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:backgroundTint="@color/colorBlue"
                 android:gravity="center"
                 android:hint="@string/phone_number"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorAsh"
-                android:textSize="20sp" />
+                android:inputType="textCapCharacters" />
 
-            <TextView
+            <com.example.vyphe.custome.VypheTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -90,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorAsh" />
 
-                <TextView
+                <com.example.vyphe.custome.VypheTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -120,7 +116,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorAsh" />
 
-                <TextView
+                <com.example.vyphe.custome.VypheTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -149,8 +145,8 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_camera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             app:backgroundTint="@color/colorBlue"
             app:fabSize="mini"

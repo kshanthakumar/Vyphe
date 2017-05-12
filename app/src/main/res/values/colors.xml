@@ -4,13 +4,15 @@
     <color name="colorPrimaryDark">#333333</color>
     <color name="colorAccent">#FF4081</color>
 
-
+    <color name="appBlack">#80333333</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBlack80">#CC000000</color>
     <color name="colorAsh">#616161</color>
     <color name="colorBlue">#0091EA</color>
     <color name="text_color">#A2A2A5</color>
-
+    <color name="selected">#0091EA</color>
+    <color name="unSelected">#757575</color>
+    <color name="editTextColor">#EEEEEE</color>
     <color name="facebookColor">#3B5998</color>
 </resources>
