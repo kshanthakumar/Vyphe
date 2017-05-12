@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name=".activity.LoginActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".activity.BaseActivity"
             android:label="@string/title_activity_base"
